@@ -1,42 +1,120 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portofolio Saya</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio Neon Jasz</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    /* Video background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background: rgba(0,0,0,0.6);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #a78bfa;
+      text-shadow: 0 0 10px #a78bfa, 0 0 20px #6366f1;
+    }
+
+    h1 span {
+      color: #38bdf8;
+      text-shadow: 0 0 8px #38bdf8, 0 0 15px #6366f1;
+    }
+
+    section {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+
+    .card {
+      background: rgba(0,0,0,0.6);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1rem auto;
+      max-width: 500px;
+      box-shadow: 0 0 15px #6366f1, 0 0 25px #9333ea;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px #38bdf8, 0 0 40px #9333ea;
+    }
+
+    a {
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: bold;
+      text-shadow: 0 0 5px #38bdf8, 0 0 10px #9333ea;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- Video Background -->
+  <video autoplay muted loop class="video-bg">
+    <source src="https://files.catbox.moe/ctpfd0.mp4" type="video/mp4">
+  </video>
+
   <header>
-    <h1>Halo, saya <span class="highlight">[Jaszz]</span></h1>
-    <p>Web Developer | Programmer |</p>
+    <div class="logo">[Jasz]</div>
+    <nav>
+      <a href="#proyek">Proyek</a>
+    </nav>
   </header>
 
-  <section class="projects">
+  <section>
+    <h1>Halo, saya <span>Jasz</span></h1>
+    <p>Web Developer | Programmer</p>
+  </section>
+
+  <section id="proyek">
     <h2>Proyek Saya</h2>
-
-    <div class="project">
-      <h3>📌 proyek pertama yang saya buat di laptop</h3>
-      <p>web yang menjelaskan tentang buaya"</p>
-      <a href="https://jaszz391.github.io/pengertian-buaya/" target="_blank">🔗 Lihat Proyek</a>
+    <div class="card">
+      <h3>📌 Proyek Pertama</h3>
+      <p>Web yang menjelaskan tentang buaya</p>
+      <a href="#">🔗 Lihat Proyek</a>
     </div>
-
-    <div class="project">
-      <h3>📌  Proyek 2</h3>
-      <p>"web yang menjelaskan biawak"</p>
-      <a href="https://jaszz391.github.io/biawak/" target="_blank">🔗 Lihat Proyek</a>
+    <div class="card">
+      <h3>📌 Proyek 2</h3>
+      <p>Web yang menjelaskan biawak</p>
+      <a href="#">🔗 Lihat Proyek</a>
     </div>
-
-    <div class="project">
-      <h3>📌 Nama Proyek 3</h3>
-      <p>Deskripsi proyek ke-3. Contoh: "Aplikasi cuaca menggunakan API OpenWeather."</p>
-      <a href="https://link-ke-proyek-3.com" target="_blank">🔗 Lihat Proyek</a>
+    <div class="card">
+      <h3>📌 Proyek 3</h3>
+      <p>Aplikasi cuaca menggunakan API OpenWeather</p>
+      <a href="#">🔗 Lihat Proyek</a>
     </div>
   </section>
 
-  <footer>
-    <p>📫 Hubungi saya di <a href="Jaszz:jaszz88899@gmail.com"083193438444</a></p>
-    <p>© 2025 [Jaszz]</p>
-  </footer>
 </body>
 </html>
