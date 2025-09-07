@@ -1,56 +1,129 @@
+/*
+  PORTFOLIO NEON CSS — biru & ungu
+*/
+
+:root {
+  --bg: #0d0d1a;
+  --card: #141426;
+  --text: #e2e8f0;
+  --primary: #6a5acd;
+  --secondary: #00f5ff;
+  --neon-pink: #ff00ff;
+  --neon-blue: #00f5ff;
+  --radius: 14px;
+  --shadow-neon: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-blue), 0 0 40px var(--neon-pink);
+  --shadow-card: 0 0 12px rgba(0,255,255,0.25);
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
-  background: #f4f4f4;
-  color: #333;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0d0d1a, #1a1a2e);
+  color: var(--text);
 }
 
+/* Navbar */
 header {
-  background-color: #4a90e2;
-  color: white;
-  padding: 40px 20px;
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(12px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-
-.highlight {
-  color: #ffd700;
-}
-
-.projects {
-  padding: 20px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.projects h2 {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.project {
-  background: white;
-  border-radius: 8px;
-  padding: 20px;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-}
-
-.project h3 {
-  margin-top: 0;
-}
-
-.project a {
-  display: inline-block;
-  margin-top: 10px;
-  text-decoration: none;
-  color: #4a90e2;
+.logo {
+  font-size: 1.4rem;
   font-weight: bold;
+  color: var(--neon-pink);
+  text-shadow: 0 0 6px var(--neon-pink), 0 0 14px var(--neon-pink);
+}
+nav a {
+  margin-left: 1.2rem;
+  color: var(--neon-blue);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color .3s;
+}
+nav a:hover {
+  color: var(--neon-pink);
+  text-shadow: var(--shadow-neon);
 }
 
-footer {
-  background: #222;
-  color: #ccc;
+/* Hero */
+.hero {
   text-align: center;
-  padding: 20px;
+  padding: 6rem 2rem 4rem;
 }
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--neon-pink);
+  text-shadow: var(--shadow-neon);
+}
+.hero span {
+  color: var(--neon-blue);
+  text-shadow: var(--shadow-neon);
+}
+.hero p {
+  font-size: 1.2rem;
+  color: #aaa;
+  margin-top: .6rem;
+}
+
+/* Section */
+section {
+  padding: 3rem 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+section h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  color: var(--neon-blue);
+  text-shadow: var(--shadow-neon);
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  transition: transform .3s, box-shadow .3s;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-neon);
+}
+.card h3 {
+  margin: 0 0 .5rem;
+  color: var(--neon-pink);
+}
+.card p {
+  margin: 0 0 1rem;
+  color: #bbb;
+}
+.card a {
+  display: inline-block;
+  color: var(--neon-blue);
+  text-decoration: none;
+  font-weight: 600;
+}
+.card a:hover {
+  color: var(--neon-pink);
+  text-shadow: var(--shadow-neon);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  color: #
